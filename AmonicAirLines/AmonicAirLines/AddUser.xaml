@@ -1,0 +1,98 @@
+﻿<Window x:Class="AmonicAirLines.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmonicAirLines"
+        mc:Ignorable="d"
+        MinWidth="330"
+        MinHeight="310"
+        MaxWidth="330"
+        MaxHeight="310"
+        
+        Title="AddUser" 
+        >
+    <Window.Resources>
+        <!-- Определение стиля для строк с меткой и текстовым полем ввода -->
+        <Style x:Key="FormFieldStyle" TargetType="Grid">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" >
+        <StackPanel Orientation="Vertical">
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Email address"/>
+                <TextBox Grid.Column="2" TextWrapping="Wrap" Name="Email"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="First name" />
+                <TextBox Grid.Column="2" TextWrapping="Wrap"  Name="LastNameTextBox"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Content="Last name" />
+                <TextBox Grid.Column="2" TextWrapping="Wrap" Name="FirstNameTextBox"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Office" />
+                <ComboBox Grid.Column="2" Name="OfficeComboBox"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Birthdate"/>
+                <TextBox Grid.Column="2" TextWrapping="Wrap" Name="BirthdateTextBox"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Width="300" Height="25" VerticalAlignment="top" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Password"/>
+                <TextBox Grid.Column="2" TextWrapping="Wrap" Name="PasswordTextBox"/>
+            </Grid>
+        </StackPanel>
+        <!---->
+        <!---->
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,230,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="Savebtn" Content="Save" Click="Savebtn_Click"/>
+            <Button Grid.Column="2" Name="Cancelbtn" Content="Cancel" Click="Cancelbtn_Click"/>
+            
+        </Grid>
+    </Grid>
+</Window>
